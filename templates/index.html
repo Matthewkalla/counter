@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Counter</title>
+</head>
+<body>
+    <h1 class="text-center">Counter</h1>
+    <p>{{ click }} time(s)</p>
+    <!-- <div class="container justify-content-md-center">
+        <a href="/">
+            <input class="btn btn-dark" type="submit" value="Click">
+        </a>
+        <a>
+            <input class ="btn btn-dark" type="submit" value="Reset">
+        </a> -->
+        <form action="/" method="post">
+            <!-- <input class="btn btn-dark bg-primary" type="submit" value="Click"> -->
+            <a href="/count">
+                <div class="btn btn-dark bg-primary">Click</div>
+            </a>
+            <a href="/destroy_session">
+                <div class="btn btn-dark bg-warning">Reset</div>
+            </a>
+        </form>
+    </div>
+</body>
+</html>
